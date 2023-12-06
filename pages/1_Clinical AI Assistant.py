@@ -4,6 +4,8 @@ from streamlit_modal import Modal
 import streamlit.components.v1 as components
 import openai
 from openai import OpenAI
+import time
+import uuid
 
 
 #0. Page Config
