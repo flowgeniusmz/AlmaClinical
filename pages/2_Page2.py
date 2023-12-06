@@ -20,7 +20,8 @@ if lg.check_authentication():
     container0 = st.container()
     with container0:
         email = st.text_input("Enter your Salesforce email", key="tiEmail")
-        sUserId = sf.get_sfUserID(email)
-        st.write(sUserId)
+        if email:
+            sUserId = sf.get_sfUserID(email)
+            st.write(sUserId)
 
             
