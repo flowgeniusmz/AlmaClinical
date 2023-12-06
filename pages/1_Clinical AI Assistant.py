@@ -27,6 +27,17 @@ if lg.check_authentication():
     model = "gpt-4-1106-preview"
     client = OpenAI()
 
+    dfClinical = sf.get_all_clinical_training()
+    dfClinical.to_csv('dfClinical.csv', index=False)
+    with open("dfClinical.csv", "rb") as file:
+        response = openai.File.create(
+            file=file,
+            purpose='assistants'
+        )
+
+    # You can now use the file ID from the response in your OpenAI API calls
+    fileid = response.id
+    
 #3. Session State Management
     if "session_id" not in st.session_state: #used to identify each session
         st.session_state.session_id = str(uuid.uuid4())
@@ -53,16 +64,7 @@ if lg.check_authentication():
                 'session_id': st.session_state.session_id,
             }
         )
-    dfClinical = sf.get_all_clinical_training()
-    dfClinical.to_csv('dfClinical.csv', index=False)
-    with open("dfClinical.csv", "rb") as file:
-        response = openai.File.create(
-            file=file,
-            purpose='assistants'
-        )
 
-    # You can now use the file ID from the response in your OpenAI API calls
-    fileid = response.id
 
     
     # If the run is completed, display the messages
