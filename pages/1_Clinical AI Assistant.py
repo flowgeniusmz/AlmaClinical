@@ -1,14 +1,13 @@
 import streamlit as st
-from  functions.login import get_loginform
-from functions.pagesetup import set_title, set_page_overview
+from functions import login as lg, pagesetup as ps
+from streamlit_modal import Modal
+import streamlit.components.v1 as components
 
 
-st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
+#0. Page Config
+st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
 
-if 'authenticated' not in st.session_state:
-    get_loginform()
-elif not st.session_state.authenticated:
-    get_loginform()
-else:
-    set_title("FlowGenius", "Page1")
-    set_page_overview("Main Header", "description text...")
+#1. Login and Page Setup
+if lg.check_authentication():
+    ps.set_title("AlmyAI", "Clinical")
+    ps.set_page_overview("Clinical Assistant", "**Clinical Assistant** is an AI-based assistant trained to interact with the Alma Clinical team.")
