@@ -7,7 +7,7 @@ import random
 
 
 def get_loginform():
-    client = login_form("FEOC Authentication", allow_guest=False)
+    client = login_form("AlmyAI Authentication", allow_guest=False)
 
     if st.session_state.authenticated:
         if st.session_state.username:
