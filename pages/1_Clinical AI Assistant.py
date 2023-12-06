@@ -2,6 +2,8 @@ import streamlit as st
 from functions import login as lg, pagesetup as ps
 from streamlit_modal import Modal
 import streamlit.components.v1 as components
+import openai
+from openai import OpenAI
 
 
 #0. Page Config
