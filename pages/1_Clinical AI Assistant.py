@@ -29,14 +29,13 @@ if lg.check_authentication():
 
     dfClinical = sf.get_all_clinical_training()
     dfClinical.to_csv('dfClinical.csv', index=False)
-    with open("dfClinical.csv", "rb") as file:
-        response = openai.File.create(
-            file=file,
-            purpose='assistants'
-        )
+    file = client.files.create(
+      file=open("dfClinical.csv", "rb"),
+      purpose='assistants'
+    )
 
     # You can now use the file ID from the response in your OpenAI API calls
-    fileid = response.id
+    fileid = file.id
     
 #3. Session State Management
     if "session_id" not in st.session_state: #used to identify each session
