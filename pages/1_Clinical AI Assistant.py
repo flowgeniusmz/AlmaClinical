@@ -11,6 +11,8 @@ import uuid
 #0. Page Config
 st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
 
+fileid = st.session_state.ClinFileId
+
 #1. Login and Page Setup
 if lg.check_authentication():
     ps.set_title("AlmyAI", "Clinical")
@@ -95,7 +97,8 @@ if lg.check_authentication():
         st.session_state.messages = client.beta.threads.messages.create(
             thread_id=st.session_state.thread.id,
             role="user",
-            content=prompt
+            content=prompt,
+            file_ids=[fileid]
         )
 
         # Do a run to process the messages in the thread
