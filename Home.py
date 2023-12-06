@@ -3,17 +3,34 @@ from functions import login as lg, pagesetup as ps, salesforce as sf
 from streamlit_modal import Modal
 import streamlit.components.v1 as components
 import pandas as pd
+import openai
+from openai import OpenAI
 
 
 #0. Page Config
 st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
+if "ClinFileId" not in st.session_state:
+    st.session_state.ClinFileId = ""
+    
+openai.api_key = st.secrets.OPENAI_API_KEY
+client = OpenAI()
 
 #1. Login and Page Setup
 if lg.check_authentication():
     ps.set_title("AlmyAI", "Clinical")
     ps.set_page_overview("Overview", "**AlmyAI - Clinical** is the first Alma AI-based app.")
     dfClinical = sf.get_all_clinical_training()
-    dfClinical.to_csv("data/clinicaltraining.csv")
+    dfClinical.to_csv('dfClinical.csv', index=False)
+    with open("dfClinical.csv", "rb") as file:
+        response = openai.File.create(
+            file=file,
+            purpose='assistants'
+        )
+
+    # You can now use the file ID from the response in your OpenAI API calls
+    file_id = response['id']
+    st.session_state.ClinFileId = file_id
+    
     if "dfClinical" not in st.session_state:
         st.session_state.dfClinical =[]
     st.session_state.dfClinical = dfClinical
