@@ -26,6 +26,13 @@ if lg.check_authentication():
     st.divider()
     container1=st.container()
     with container1:
-        tab1, tab2, tab3 = st.tabs(["Trainings", "Opportunities", "Activities"]
+        tab1, tab2, tab3 = st.tabs({"Trainings", "Opportunities", "Activities"})
+        with tab1:
+            st.markdown("**My Trainings**")
+        with tab2: 
+            st.markdown("**My Opportunities**")
+        with tab3: 
+            st.markdown("**My Activities**")
+                    
 
             
