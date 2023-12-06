@@ -12,16 +12,7 @@ import uuid
 #0. Page Config
 st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
 
-dfClinical = sf.get_all_clinical_training()
-dfClinical.to_csv('dfClinical.csv', index=False)
-with open("dfClinical.csv", "rb") as file:
-    response = openai.File.create(
-        file=file,
-        purpose='assistants'
-    )
 
-# You can now use the file ID from the response in your OpenAI API calls
-fileid = response.id
 
 
     
@@ -62,6 +53,17 @@ if lg.check_authentication():
                 'session_id': st.session_state.session_id,
             }
         )
+    dfClinical = sf.get_all_clinical_training()
+    dfClinical.to_csv('dfClinical.csv', index=False)
+    with open("dfClinical.csv", "rb") as file:
+        response = openai.File.create(
+            file=file,
+            purpose='assistants'
+        )
+
+    # You can now use the file ID from the response in your OpenAI API calls
+    fileid = response.id
+
     
     # If the run is completed, display the messages
     elif hasattr(st.session_state.run, 'status') and st.session_state.run.status == "completed":
