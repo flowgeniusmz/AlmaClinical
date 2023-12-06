@@ -1,11 +1,8 @@
 import streamlit as st
-from  functions.login import get_loginform
-from functions.pagesetup import set_title
+from functions import login as lg, pagesetup as ps
 from streamlit_modal import Modal
 import streamlit.components.v1 as components
 
-
-st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
 
 #0. Page Config
 st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
