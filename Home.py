@@ -19,19 +19,4 @@ client = OpenAI()
 if lg.check_authentication():
     ps.set_title("AlmyAI", "Clinical")
     ps.set_page_overview("Overview", "**AlmyAI - Clinical** is the first Alma AI-based app.")
-    dfClinical = sf.get_all_clinical_training()
-    dfClinical.to_csv('dfClinical.csv', index=False)
-    with open("dfClinical.csv", "rb") as file:
-        response = openai.File.create(
-            file=file,
-            purpose='assistants'
-        )
 
-    # You can now use the file ID from the response in your OpenAI API calls
-    file_id = response['id']
-    st.session_state.ClinFileId = file_id
-    
-    if "dfClinical" not in st.session_state:
-        st.session_state.dfClinical =[]
-    st.session_state.dfClinical = dfClinical
-    
