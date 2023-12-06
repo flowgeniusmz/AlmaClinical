@@ -16,4 +16,8 @@ if lg.check_authentication():
     ps.set_title("AlmyAI", "Clinical")
     ps.set_page_overview("Clinical Assistant", "**Clinical Assistant** is an AI-based assistant trained to interact with the Alma Clinical team.")
 
-    st.write(st.session_state.username)
+    container0 = st.container()
+    with container0:
+        email = st.text_input("Enter your Salesforce email", key="tiEmail")
+
+            
