@@ -1,5 +1,6 @@
 import streamlit as st
-from functions import login as lg, pagesetup as ps
+from functions import login as lg, pagesetup as ps, salesforce as sf
+import pandas as pd
 from streamlit_modal import Modal
 import streamlit.components.v1 as components
 import openai
@@ -11,7 +12,19 @@ import uuid
 #0. Page Config
 st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
 
-fileid = st.session_state.ClinFileId
+dfClinical = sf.get_all_clinical_training()
+dfClinical.to_csv('dfClinical.csv', index=False)
+with open("dfClinical.csv", "rb") as file:
+    response = openai.File.create(
+        file=file,
+        purpose='assistants'
+    )
+
+# You can now use the file ID from the response in your OpenAI API calls
+fileid = response.id
+
+
+    
 
 #1. Login and Page Setup
 if lg.check_authentication():
