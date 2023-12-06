@@ -10,6 +10,6 @@ st.set_page_config("AlmyAI", initial_sidebar_state="collapsed", layout="wide")
 #1. Login and Page Setup
 if lg.check_authentication():
     ps.set_title("AlmyAI", "Clinical")
-    ps.set_page_overview("Overview", "**Clinical Assistant** puts AI in the hands of Alma Clinical.")
+    ps.set_page_overview("Overview", "**AlmyAI - Clinical** is the first Alma AI-based app.")
 
     
