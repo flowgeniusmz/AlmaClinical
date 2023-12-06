@@ -29,6 +29,10 @@ if lg.check_authentication():
         tab1, tab2, tab3 = st.tabs({"Trainings", "Opportunities", "Activities"})
         with tab1:
             st.markdown("**My Trainings**")
+            dfTrainings = sf.get_trainings(email)
+            container1a = st.container()
+            with container1a:
+                st.dataframe(dfTrainings)
         with tab2: 
             st.markdown("**My Opportunities**")
         with tab3: 
