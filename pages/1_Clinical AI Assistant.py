@@ -117,7 +117,7 @@ if lg.check_authentication():
             thread_id=st.session_state.thread.id,
             role="user",
             content=prompt,
-            file_ids=[fileid]
+            file_ids=[st.session_state.fileid]
         )
 
         # Do a run to process the messages in the thread
