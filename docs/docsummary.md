@@ -94,3 +94,106 @@ The VShape Ultra is an advanced aesthetic treatment system combining focused RF 
 - Links to comprehensive manuals, instructional videos, and further reading.
 - Contact information for technical support and customer service.
 
+# Opus Plasma Training Material
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Device Overview](#device-overview)
+- [Safety Guidelines](#safety-guidelines)
+- [Operating Procedures](#operating-procedures)
+- [Treatment Protocols](#treatment-protocols)
+- [Troubleshooting](#troubleshooting)
+- [Maintenance and Cleaning](#maintenance-and-cleaning)
+- [Post-Treatment Care](#post-treatment-care)
+- [Documentation and Consent](#documentation-and-consent)
+
+## Introduction
+Opus Plasma represents a state-of-the-art aesthetic treatment system, combining RF technology and microablative needling for various dermatological applications.
+
+## Device Overview
+- Description of the Opus Plasma system, including handpieces and accessories.
+- Technical specifications for optimal operation.
+
+## Safety Guidelines
+- Safety measures and contraindications for using the Opus Plasma system.
+- Emergency procedures and first-aid measures.
+
+## Operating Procedures
+- Step-by-step instructions for setting up the device.
+- Guidelines for different treatment types, including facial and body applications.
+
+## Treatment Protocols
+- Detailed protocols for aesthetic treatments using Opus Plasma.
+- Specific guidelines for treatment intensity, duration, and frequency.
+
+## Troubleshooting
+- Solutions for common technical and operational issues.
+- Steps to identify and resolve problems with the system.
+
+## Maintenance and Cleaning
+- Routine procedures for cleaning and maintaining the device and its components.
+- Instructions on sterilizing equipment and ensuring operational efficiency.
+
+## Post-Treatment Care
+- Guidelines for patient care following treatment with Opus Plasma.
+- Tips for managing common post-treatment symptoms and ensuring patient comfort.
+
+## Documentation and Consent
+- Importance of informed consent and accurate treatment documentation.
+- Templates and guidelines for patient information, consent forms, and treatment records.
+
+## [Additional Resources]
+- Links to comprehensive manuals, instructional videos, and further training materials.
+- Contact information for technical support and customer service.
+# Alma Hybrid Training Material
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Device Overview](#device-overview)
+- [Safety Guidelines](#safety-guidelines)
+- [Operating Procedures](#operating-procedures)
+- [Treatment Protocols](#treatment-protocols)
+- [Troubleshooting](#troubleshooting)
+- [Maintenance and Cleaning](#maintenance-and-cleaning)
+- [Post-Treatment Care](#post-treatment-care)
+- [Documentation and Consent](#documentation-and-consent)
+
+## Introduction
+The Alma Hybrid system combines advanced laser technologies for various aesthetic and dermatological treatments.
+
+## Device Overview
+- Description of the Alma Hybrid system, including handpieces and accessories.
+- Technical specifications and configurations for optimal operation.
+
+## Safety Guidelines
+- Safety measures and contraindications for using the Alma Hybrid system.
+- Emergency procedures and first-aid measures.
+
+## Operating Procedures
+- Instructions for setting up the device and preparing for treatments.
+- Specific procedures for using different handpieces and treatment modes.
+
+## Treatment Protocols
+- Detailed protocols for various treatments, including skin resurfacing and dermatological applications.
+- Guidelines on parameters like energy levels, density, and cooling for different skin types.
+
+## Troubleshooting
+- Common issues encountered with the Alma Hybrid system and solutions.
+- Steps for identifying and addressing technical problems.
+
+## Maintenance and Cleaning
+- Routine procedures for cleaning and maintaining the device, handpieces, and accessories.
+- Guidelines on sterilization and ensuring operational efficiency.
+
+## Post-Treatment Care
+- Recommendations for care after treatment to ensure patient comfort and maximize treatment efficacy.
+- Management of common post-treatment symptoms.
+
+## Documentation and Consent
+- Importance of informed consent and accurate documentation of treatments.
+- Sample forms and guidelines for patient information and consent.
+
+## [Additional Resources]
+- Links to comprehensive manuals, instructional videos, and further training materials.
+- Contact information for technical support and customer service.
+
