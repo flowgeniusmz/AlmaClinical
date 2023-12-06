@@ -42,8 +42,9 @@ def get_trainings(varUser):
 
 @st.cache_data
 def get_all_clinical_training():
-    query = f"SELECT Account__c, Asset__c, Assigned_Email__c, Install_Date__c, Status__c, Assigned__c, Booked_to_Training_Complete__c, Booked_Date__c, City__c, Contact__c, Contact_Email__c, Contact_Phone__c, Days_from_installation__c, Initial_Call_Date__c, Install_to_Training_Complete__c, Opportunity__c, OwnerId, Product_From_Asset__c, Product__c, Sales_rep__c, Scheduler__c, Ship_Date__c, State_Province__c, Status__c, Training_End_Date__c, Training_Length__c, Training_Type__c FROM Clinical_Trainings__c WHERE Subsidiary__c = 'Alma Lasers , Inc.'"
-    data = sf.query(query)
+    #query = f"SELECT Account__c, Asset__c, Assigned_Email__c, Install_Date__c, Status__c, Assigned__c, Booked_to_Training_Complete__c, Booked_Date__c, City__c, Contact__c, Contact_Email__c, Contact_Phone__c, Days_from_installation__c, Initial_Call_Date__c, Install_to_Training_Complete__c, Opportunity__c, OwnerId, Product_From_Asset__c, Product__c, Sales_rep__c, Scheduler__c, Ship_Date__c, State_Province__c, Status__c, Training_End_Date__c, Training_Length__c, Training_Type__c FROM Clinical_Trainings__c WHERE Subsidiary__c = 'Alma Lasers , Inc.'"
+  query = f"SELECT Account__c, Asset__c, Assigned_Email__c, Install_Date__c, Status__c FROM Clinical_Trainings__c WHERE Subsidiary__c = 'Alma Lasers , Inc.'"  
+  data = sf.query(query)
     records = data['records']
 
     # Extracting data from each record
