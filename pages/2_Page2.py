@@ -23,5 +23,9 @@ if lg.check_authentication():
         if email:
             sUserId = sf.get_sfUserID(email)
             st.write(sUserId)
+    st.divider()
+    container1=st.container()
+    with container1:
+        tab1, tab2, tab3 = st.tabs(["Trainings", "Opportunities", "Activities"]
 
             
